@@ -9,6 +9,7 @@ import { RxCrossCircled } from "react-icons/rx";
 
 import "../full-detailPage/box.css";
 
+/* this links shows when share button clicked  */
 const linkofAB = "http://www.almabetter.com/mohan-singh";
 
 export const ShareButton = ({ clickedorNot, closeShareComponent }) => {
@@ -33,6 +34,7 @@ export const ShareButton = ({ clickedorNot, closeShareComponent }) => {
     window.open(url, "_blank");
   }
 
+  /* share button */
   const shareWhatsApp = () => {
     const url = `https://api.whatsapp.com/send?text=${encodeURIComponent(
       987654321
@@ -44,6 +46,7 @@ export const ShareButton = ({ clickedorNot, closeShareComponent }) => {
     navigator.clipboard.writeText(linkofAB);
     setIsCopied(true);
   }
+  /* when facebook item clicked */
   function facbookClicked() {
     const url = `https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent(
       currentUrlProject
@@ -51,6 +54,7 @@ export const ShareButton = ({ clickedorNot, closeShareComponent }) => {
     window.open(url, "_blank");
   }
 
+  /* when clicked on mail  */
   const shareToEmail = () => {
     const subject = "Check this out!";
     const body = `I found this interesting: ${currentUrlProject}`;
@@ -66,6 +70,7 @@ export const ShareButton = ({ clickedorNot, closeShareComponent }) => {
         <div className="box-setting  p-4">
           <div className="flex justify-between p-1 m-2 gap-4 ">
             <p className="text-lg font-bold">Share</p>
+            {/* cross icon to close the sharecomponent box */}
             <RxCrossCircled
               className="hover:cursor-pointer hover:scale-105 animate-bounce"
               style={{ width: "50px", height: "45px" }}
