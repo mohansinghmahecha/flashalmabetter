@@ -1,0 +1,29 @@
+.box-setting{
+    width: 500px;
+    height: 300px;
+    border-radius: 5%;
+    background-color: rgb(255, 255, 255);
+    color: rgb(0, 0, 0);
+    left: 30%;
+    top: 30%;
+    overflow: hidden;
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    z-index: 50;
+    justify-content: space-between;
+    border: 2px solid red;
+}
+.box-svg-size{
+    width: 30px;
+    height: 30px;
+}
+
+.animate-bounce {
+    /* Existing bounce animation definition */
+    animation-iteration-count: 1;
+  }
+
+  .margin-bt{
+    margin-top: -30px;
+  }
